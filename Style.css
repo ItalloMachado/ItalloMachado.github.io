@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body, html{
+    height: 100%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header{
+    height: 100%;
+    background-color: blue;
+    color: black;
+}
+
+.textHead{
+    width: 250px;
+    height: 250px;
+     padding-top: 150px;
+    padding-left: 25px; 
+
+}
+
+.textInicial{
+   height: 80px;
+   background-color: aquamarine;
+}
+.textInicial h1{
+    padding: 20px 30px 20px;
+    font-size: 40px;
+}
+
+.Conteudo{
+    padding: 30px 20px 30px;
+    background-color: antiquewhite;
+}
+.Conteudo p{
+    text-align: justify; 
+    text-indent: 25px;
+    padding: 10px 0 0;
+    line-height: 1.6;
+    font-size: 20px;
+}
