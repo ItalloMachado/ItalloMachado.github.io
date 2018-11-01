@@ -70,8 +70,14 @@ body, html{
     line-height: 1.6;
     font-size: 20px;
 }
+
 @media screen and (max-width: 700px) {
     .textHead {   
         width: 60%;
+    }
+}
+@media screen and (max-width: 400px) {
+    .textHead {   
+        width: 100%;
     }
 }
