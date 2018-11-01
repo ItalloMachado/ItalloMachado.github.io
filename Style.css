@@ -8,33 +8,62 @@ body, html{
     font-family: Arial, Helvetica, sans-serif;
 }
 .header{
+    width: auto;
     height: 100%;
-    background-color: blue;
+    background-image: url("Me.jpeg"); 
     color: black;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .textHead{
-    width: 250px;
-    height: 250px;
-     padding-top: 150px;
+    /* width: 250px;
+    height: 250px; */
+    width: 40%;
+    padding-top: 250px;
     padding-left: 25px; 
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.8); /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    height: 100%;
+}
+.textHead h1{
+    text-align: center; 
+    text-indent: 25px;
+    padding: 10px 0 0;
+    line-height: 1.6;
+    font-size: 45px;
+}
 
+.textHead p{
+    text-align: center; 
+    padding: 10px 0 0;
+    line-height: 1.6;
+    font-size: 15px;
 }
 
 .textInicial{
    height: 80px;
-   background-color: aquamarine;
+   background-color:rgb(0 ,139, 139);
 }
 .textInicial h1{
     padding: 20px 30px 20px;
     font-size: 40px;
+    color: rgb(232, 232, 232);
 }
 
 .Conteudo{
     padding: 30px 20px 30px;
-    background-color: antiquewhite;
+    background-color: rgb(232, 232, 232);
 }
-.Conteudo p{
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: rgb(255, 255, 255);
+    padding: 16px;
+}
+.card p{
     text-align: justify; 
     text-indent: 25px;
     padding: 10px 0 0;
