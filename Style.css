@@ -12,26 +12,26 @@ body, html{
     height: 100%;
     background-image: url("Me.jpeg"); 
     color: black;
-
+    position: relative;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; 
 }
 
 .textHead{
+    position: absolute;
     /* width: 250px;
     height: 250px; */
     width: 40%;
     padding-top: 250px;
-    padding-left: 25px; 
     background: rgb(0, 0, 0); /* Fallback color */
     background: rgba(0, 0, 0, 0.8); /* Black background with 0.5 opacity */
     color: #f1f1f1;
     height: 100%;
+  
 }
 .textHead h1{
     text-align: center; 
-    text-indent: 25px;
     padding: 10px 0 0;
     line-height: 1.6;
     font-size: 45px;
@@ -44,9 +44,40 @@ body, html{
     font-size: 15px;
 }
 
+.nav{
+    position: absolute;
+    overflow: hidden;
+    top: 80%;
+    left: 10%;
+    background-color: aqua;
+
+
+}
+.nav a{
+    border-bottom: 1px solid #f1f1f1;
+    color:#f1f1f1;
+    display: inline-block;
+    text-align: center;
+    padding: 10px 0;
+    margin: 5px 15px 0;
+    font-size: auto;
+    text-decoration: none;
+    cursor: pointer;
+    line-height: 1.6;
+    opacity: 1;
+    transition: .5s ease;
+}
+
+.nav a:hover{
+    border-bottom: 1px solid rgb(0 ,139, 139);
+    color:rgb(0 ,139, 139);
+    opacity: 0.6;
+}
+
 .textInicial{
    height: 80px;
    background-color:rgb(0 ,139, 139);
+   
 }
 .textInicial h1{
     padding: 20px 30px 20px;
@@ -71,13 +102,26 @@ body, html{
     font-size: 20px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1200px) {
+    .nav a{   
+        margin: 5px 5px 0;
+    }
+}
+@media screen and (max-width: 900px) {
     .textHead {   
         width: 60%;
     }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
     .textHead {   
         width: 100%;
+    }
+    .nav {   
+        left: 15%;
+    }
+}
+@media screen and (max-width: 400px) {
+    .nav {   
+        left: 5%;
     }
 }
