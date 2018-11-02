@@ -17,6 +17,69 @@ body, html{
     background-repeat: no-repeat;
     background-size: cover; 
 }
+.main{
+    background-color:  rgb(232, 232, 232);
+}
+#Principal{
+    transition: margin-left .5s;
+}
+#head{
+    transition: margin-left .5s;
+}
+
+.sidenav{
+    width: 0;
+    top: 0;
+    background: #f1f1f1;
+    overflow-x: hidden;
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+}
+
+.SideFoto{
+    border-bottom: 1px solid rgb(184, 184, 184);
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    font-size: 12px;
+    /*padding: 6px 8px 6px 10px;*/
+    cursor: pointer;
+}
+.SideFoto p{
+    color: rgb(180, 180, 180);
+    font-size: 12px;
+}
+.SideFoto .imagem:hover{
+    opacity: 0.8;
+}
+.SideFoto .fototext:hover{
+    border-left: 3px solid rgb(0 ,139, 139);
+    background-color: #e0e0e0;
+}
+.sideOp{
+    /*position: fixed;*/
+    overflow-x: hidden;
+    width: 240px; 
+    padding: 8px 0;
+
+}
+.sideOp a{
+    text-decoration: none;   
+    display: block;
+    padding: 7px 8px 7px 10px;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sideOp a:hover{
+    border-left: 3px solid rgb(0 ,139, 139);
+    background-color: #e0e0e0;
+}
 
 .textHead{
     position: absolute;
@@ -124,3 +187,5 @@ body, html{
         left: 5%;
     }
 }
+
+
