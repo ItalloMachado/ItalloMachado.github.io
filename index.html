@@ -7,9 +7,11 @@
     <link rel="stylesheet" href="Style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
+        function Menu(){
+
+        }
         $(document).ready(function(){
             window.onscroll = function() {
-                console.log(document.documentElement.scrollTop);
                 if (document.body.scrollTop > 654 || document.documentElement.scrollTop > 654) {
                     document.getElementById("sidenav").style.width = "250px";
                     document.getElementById("Principal").style.marginLeft = "250px";
@@ -30,7 +32,6 @@
                 }
             });
             $('.SideFoto').on('click',function(event){
-                console.log("aaaaa");
                 event.preventDefault();
                     var hash="#head";
                     $('html,body').animate({scrollTop: $(hash).offset().top},800,function(){
@@ -41,7 +42,14 @@
     </script>
 </head>
 <body>
-     <div class="header"  id="head">
+    <div class="navMobile">
+        <div class="navName">
+            <h1>Itallo Machado</h1>
+            <p>Mechatronic Engineering</p>
+        </div>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="Menu()">&#9776;</a>
+    </div>
+    <div class="header"  id="head">
         <div class="textHead">
             <div class="nav"> 
                 <a href="#sobre">Sobre</a>
@@ -56,6 +64,7 @@
     </div> 
     <div class="main">
         <div class="sidenav" id="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
             <div class="SideFoto">
                 <img src="left_me.jpg" alt="Itallo" class="imagem" style="width: 100%">
                 <div class="fototext">
