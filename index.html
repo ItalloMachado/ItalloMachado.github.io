@@ -7,42 +7,73 @@
     <link rel="stylesheet" href="Style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-        function Menu(){
-
+    function Menu(){
+            document.getElementById("sidenav").style.width = "100%";
         }
+        function closeNav(){
+            document.getElementById("sidenav").style.width = "0";
+        } 
+                console.log(window.innerWidth);
+        console.log(document.width);
         $(document).ready(function(){
             window.onscroll = function() {
-                if (document.body.scrollTop > 654 || document.documentElement.scrollTop > 654) {
-                    document.getElementById("sidenav").style.width = "250px";
-                    document.getElementById("Principal").style.marginLeft = "250px";
-                    document.getElementById("head").style.marginLeft = "250px";
+                if (window.innerWidth>=800){
+                    document.getElementById("closebtn").style.display="none";
+                    document.getElementById("navMobile").style.display="none";
+                    if (document.body.scrollTop > 654 || document.documentElement.scrollTop > 654) {
+                        document.getElementById("sidenav").style.width = "250px";
+                        document.getElementById("Principal").style.marginLeft = "250px";
+                        document.getElementById("head").style.marginLeft = "250px";
+                    }else{
+                        document.getElementById("sidenav").style.width = "0";
+                        document.getElementById("Principal").style.marginLeft = "0";
+                        document.getElementById("head").style.marginLeft = "0";
+                    }
                 }else{
+                    document.getElementById("closebtn").style.display="block";
+                    document.getElementById("navMobile").style.display="block";
                     document.getElementById("sidenav").style.width = "0";
                     document.getElementById("Principal").style.marginLeft = "0";
                     document.getElementById("head").style.marginLeft = "0";
+
+                    if (document.body.scrollTop > 594 || document.documentElement.scrollTop > 594) {
+                        document.getElementById("navMobile").style.top = "0";
+                    }else{
+                        document.getElementById("navMobile").style.top = "-100px";
+                    }
                 }
             };
             $('a').on('click',function(event){
                 if(this.hash !==""){
                     event.preventDefault();
                     var hash=this.hash;
-                    $('html,body').animate({scrollTop: $(hash).offset().top},800,function(){
-                        window.location.hash=hash;
-                    });
+                    if (window.innerWidth>=800){
+                     $('html,body').animate({scrollTop: $(hash).offset().top},800,function(){
+                        window.location.hash=hash;}); 
+                     }else{
+                        document.getElementById("sidenav").style.width = "0";
+                        var x=$(hash).offset().top-60;
+                        $('html,body').animate({scrollTop: x},800,function(){});
+                     }
+                    
                 }
             });
             $('.SideFoto').on('click',function(event){
+                document.getElementById("sidenav").style.width = "0";
                 event.preventDefault();
                     var hash="#head";
+                    if (window.innerWidth<800){
+                        document.getElementById("sidenav").style.width = "0";
+                     }
                     $('html,body').animate({scrollTop: $(hash).offset().top},800,function(){
-                        window.location.hash=hash;
-                    });
+                        window.location.hash=hash;}); 
+                   
             });
         });
     </script>
 </head>
 <body>
-    <div class="navMobile">
+    <div class="navMobile" id="navMobile">
         <div class="navName">
             <h1>Itallo Machado</h1>
             <p>Mechatronic Engineering</p>
@@ -52,11 +83,11 @@
     <div class="header"  id="head">
         <div class="textHead">
             <div class="nav"> 
-                <a href="#sobre">Sobre</a>
-                <a href="#sobre">Projeto</a>
-                <a href="#sobre">Skills</a>
-                <a href="#sobre">Educação</a>
-                <a href="#sobre">Contato</a>  
+                <a href="#Sobre">Sobre</a>
+                <a href="#Projetos">Projetos</a>
+                <a href="#Skills">Skills</a>
+                <a href="#Educacao">Educação</a>
+                <a href="#Contato">Contato</a>  
             </div>    
             <h1>Itallo Machado</h1>
             <p>Labore eu dolor excepteur eiusmod voluptate eu elit mollit ipsum.</p>
@@ -64,25 +95,25 @@
     </div> 
     <div class="main">
         <div class="sidenav" id="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-            <div class="SideFoto">
-                <img src="left_me.jpg" alt="Itallo" class="imagem" style="width: 100%">
+                <a href="javascript:void(0)" id="closebtn" onclick="closeNav()">×</a>
+                <div class="SideFoto">
+                <img src="left_me.jpg" alt="Itallo" id="imagem" style="width: 100%">
                 <div class="fototext">
                     <h1>Itallo Machado</h1>
                     <p>mechatronic engineering</p>
                 </div>
             </div>
             <div class="sideOp">
-                <a href="#sobre">Sobre</a>
-                <a href="#sobre">Projeto</a>
-                <a href="#sobre">Skills</a>
-                <a href="#sobre">Educação</a>
-                <a href="#sobre">Contato</a>
+                <a href="#Sobre">Sobre</a>
+                <a href="#Projetos">Projetos</a>
+                <a href="#Skills">Skills</a>
+                <a href="#Educacao">Educação</a>
+                <a href="#Contato">Contato</a>
             </div>  
         </div>
         <div class="Principal" id="Principal"> 
 
-            <div class="Sobre" id="sobre"> 
+            <div  id="Sobre"> 
                 <div class="textInicial">
                     <h1>Sobre</h1> 
                 </div>
@@ -93,7 +124,7 @@
                     </div>
                 </div>
             </div>
-            <div class="Projetos">
+            <div id="Projetos">
                 <div class="textInicial">
                     <h1>Projetos</h1> 
                 </div>
@@ -102,6 +133,39 @@
                         <p>Anim do eiusmod minim eu minim voluptate. Lorem aliquip do exercitation voluptate duis. Ea cupidatat veniam et consectetur eiusmod ullamco aliqua consectetur. Enim magna reprehenderit officia non aliqua aute aliquip. Deserunt fugiat sit in fugiat nulla mollit fugiat enim dolor aute ad pariatur consequat.</p>
                         <p>Anim do eiusmod minim eu minim voluptate. Lorem aliquip do exercitation voluptate duis. Ea cupidatat veniam et consectetur eiusmod ullamco aliqua consectetur. Enim magna reprehenderit officia non aliqua aute aliquip. Deserunt fugiat sit in fugiat nulla mollit fugiat enim dolor aute ad pariatur consequat.</p>
                      </div>
+                </div>
+            </div>
+            <div  id="Skills"> 
+                <div class="textInicial">
+                <h1>Skills</h1> 
+                </div>
+                <div class="Conteudo">
+                    <div class="card">
+                        <p>Anim do eiusmod minim eu minim voluptate. Lorem aliquip do exercitation voluptate duis. Ea cupidatat veniam et consectetur eiusmod ullamco aliqua consectetur. Enim magna reprehenderit officia non aliqua aute aliquip. Deserunt fugiat sit in fugiat nulla mollit fugiat enim dolor aute ad pariatur consequat.</p>
+                        <p>Anim do eiusmod minim eu minim voluptate. Lorem aliquip do exercitation voluptate duis. Ea cupidatat veniam et consectetur eiusmod ullamco aliqua consectetur. Enim magna reprehenderit officia non aliqua aute aliquip. Deserunt fugiat sit in fugiat nulla mollit fugiat enim dolor aute ad pariatur consequat.</p>
+                    </div>
+                </div>
+            </div>
+            <div  id="Educacao"> 
+                <div class="textInicial">
+                    <h1>Educação</h1> 
+                </div>
+                <div class="Conteudo">
+                    <div class="card">
+                        <p>Anim do eiusmod minim eu minim voluptate. Lorem aliquip do exercitation voluptate duis. Ea cupidatat veniam et consectetur eiusmod ullamco aliqua consectetur. Enim magna reprehenderit officia non aliqua aute aliquip. Deserunt fugiat sit in fugiat nulla mollit fugiat enim dolor aute ad pariatur consequat.</p>
+                        <p>Anim do eiusmod minim eu minim voluptate. Lorem aliquip do exercitation voluptate duis. Ea cupidatat veniam et consectetur eiusmod ullamco aliqua consectetur. Enim magna reprehenderit officia non aliqua aute aliquip. Deserunt fugiat sit in fugiat nulla mollit fugiat enim dolor aute ad pariatur consequat.</p>
+                    </div>
+                </div>
+            </div>
+            <div  id="Contato"> 
+                <div class="textInicial">
+                    <h1>Contato</h1> 
+                </div>
+                <div class="Conteudo">
+                    <div class="card">
+                        <p>Anim do eiusmod minim eu minim voluptate. Lorem aliquip do exercitation voluptate duis. Ea cupidatat veniam et consectetur eiusmod ullamco aliqua consectetur. Enim magna reprehenderit officia non aliqua aute aliquip. Deserunt fugiat sit in fugiat nulla mollit fugiat enim dolor aute ad pariatur consequat.</p>
+                        <p>Anim do eiusmod minim eu minim voluptate. Lorem aliquip do exercitation voluptate duis. Ea cupidatat veniam et consectetur eiusmod ullamco aliqua consectetur. Enim magna reprehenderit officia non aliqua aute aliquip. Deserunt fugiat sit in fugiat nulla mollit fugiat enim dolor aute ad pariatur consequat.</p>
+                    </div>
                 </div>
             </div>
         </div>
