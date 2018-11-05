@@ -37,7 +37,7 @@
                     document.getElementById("Principal").style.marginLeft = "0";
                     document.getElementById("head").style.marginLeft = "0";
 
-                    if (document.body.scrollTop > 594 || document.documentElement.scrollTop > 594) {
+                    if (document.body.scrollTop >= window.innerHeight || document.documentElement.scrollTop >= window.innerHeight) {
                         document.getElementById("navMobile").style.top = "0";
                     }else{
                         document.getElementById("navMobile").style.top = "-100px";
