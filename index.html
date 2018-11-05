@@ -21,7 +21,7 @@
                 if (window.innerWidth>=800){
                     document.getElementById("closebtn").style.display="none";
                     document.getElementById("navMobile").style.display="none";
-                    if (document.body.scrollTop >= window.innerHeight || document.documentElement.scrollTop >= window.innerHeight) {
+                    if (document.body.scrollTop >= window.innerHeight-60 || document.documentElement.scrollTop >= window.innerHeight-60) {
                         document.getElementById("sidenav").style.width = "250px";
                         document.getElementById("Principal").style.marginLeft = "250px";
                         document.getElementById("head").style.marginLeft = "250px";
