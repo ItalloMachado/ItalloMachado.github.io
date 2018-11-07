@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
     function Menu(){
@@ -14,8 +14,7 @@
         function closeNav(){
             document.getElementById("sidenav").style.width = "0";
         } 
-                console.log(window.innerWidth);
-        console.log(document.width);
+                console.log(window.innerHeight);
         $(document).ready(function(){
             window.onscroll = function() {
                 if (window.innerWidth>=800){
@@ -37,8 +36,8 @@
                     document.getElementById("Principal").style.marginLeft = "0";
                     document.getElementById("head").style.marginLeft = "0";
 
-                    if (document.body.scrollTop >= (window.innerHeight-60) || document.documentElement.scrollTop >= (window.innerHeight-60)) {
-                       document.getElementById("navMobile").style.top = "0";
+                    if (document.body.scrollTop >= (window.innerHeight-60) || document.documentElement.scrollTop >= window.innerHeight-60) {
+                        document.getElementById("navMobile").style.top = "0";
                     }else{
                         document.getElementById("navMobile").style.top = "-100px";
                     }
@@ -120,8 +119,7 @@
                 </div>
                 <div class="Conteudo">
                     <div class="card">
-                        <p>Anim do eiusmod minim eu minim voluptate. Lorem aliquip do exercitation voluptate duis. Ea cupidatat veniam et consectetur eiusmod ullamco aliqua consectetur. Enim magna reprehenderit officia non aliqua aute aliquip. Deserunt fugiat sit in fugiat nulla mollit fugiat enim dolor aute ad pariatur consequat.</p>
-                        <p>Anim do eiusmod minim eu minim voluptate. Lorem aliquip do exercitation voluptate duis. Ea cupidatat veniam et consectetur eiusmod ullamco aliqua consectetur. Enim magna reprehenderit officia non aliqua aute aliquip. Deserunt fugiat sit in fugiat nulla mollit fugiat enim dolor aute ad pariatur consequat.</p>
+                        <p>Olá, eu sou o Itallo! Engenheiro Mecatrônico fascinado por ciência e tecnologia, especialmente, na área de Inteligência Artificial. Sou graduado pela Universidade Federal de São João del-Rei e estou no processo para o mestrado em Engenharia Elétrica pela Universidade Federal de Minas Gerais. O despertar para essa área ocorreu quando participei do Campeonato de Robótica, integrando a equipe que representava o Brasil. A nossa categoria era a Simulação 2D de Robôs para jogar partidas de futebol, em que, para a tomada de decisões utilizamos a Inteligência Artificial (IA). Essa experiência foi imprescindível para o desenvolvimento das minhas habilidades em IA. Além disso, esse site representa o meu fascínio também pelo desenvolvimento de Web, além dos projetos apresentados no próprio site. A minha trajetória, desde que iniciei a minha graduação, me fizeram um  apaixonado pelo desenvolvimento de projetos na área de Inteligência Artificial e desenvolvimento Web.</p>
                     </div>
                 </div>
             </div>
