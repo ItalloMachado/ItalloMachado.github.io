@@ -264,7 +264,19 @@ body, html{
     height: 150px;
     padding: 15px;
 }
+#Projetos a{
+    text-align: justify; 
+    text-decoration: none;
+    text-indent: 25px;
+    color: rgb(0 ,139, 139);
+    padding: 10px 0 0;
+    line-height: 1.6;
+    font-size: 20px;
+}
 
+#Projetos a:hover{
+    border-bottom: 2px solid rgba(0, 139, 139);
+}
 #Educacao a{
     text-align: justify; 
     text-decoration: none;
