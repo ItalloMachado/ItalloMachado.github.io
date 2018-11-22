@@ -217,21 +217,6 @@ body, html{
     height: 100vh;
 }
 
-.column{
-    float: left;
-    width: 25%;
-    padding: 0 20px;
-    padding: 30px 20px 30px;
-    
-}
-.row{margin: 0 -5px;}
-
-.row:after{
-    content: "";
-    display: table;
-    clear: both;
-}
-
 .card h3{
     width: 100%;
     border-bottom: 1px solid black;
@@ -255,6 +240,77 @@ body, html{
     padding: 10px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
+.Proj{
+    position: relative;
+    width: 300px;
+    height: 250px;
+}
+.sobreImg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius:5%;
+}
+.Proj:hover .sobreImg{
+    height: 206px;
+}
+
+.sobreImg .icons{
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.sobreImg .icons .fa{
+    padding: 0;
+    font-size: 50px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0px 2px;
+    border-radius: 10%;
+    color: rgb(0 ,139, 139);;
+    border: 1px solid rgb(0 ,139, 139);
+    margin: 0 10px;
+}
+
+#videoOpen{
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0,0.9);
+    overflow: auto; 
+}
+#videoOpen .closebtn{
+    float: right;
+    text-decoration: none;
+    color: white;
+    font-size: 50px;
+    padding: 10px 30px;
+}
+.videoProjeto{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
 .imgskills{
     display: block;
     margin-left: auto;
@@ -264,18 +320,10 @@ body, html{
     height: 150px;
     padding: 15px;
 }
-#Projetos a{
-    text-align: justify; 
-    text-decoration: none;
-    text-indent: 25px;
-    color: rgb(0 ,139, 139);
-    padding: 10px 0 0;
-    line-height: 1.6;
-    font-size: 20px;
-}
-
-#Projetos a:hover{
-    border-bottom: 2px solid rgba(0, 139, 139);
+.Proj .imgskills{
+    max-width: 100%;
+    height: 201px;
+    padding: 5px;
 }
 #Educacao a{
     text-align: justify; 
@@ -303,7 +351,9 @@ body, html{
     color:  rgb(146, 146, 146);
 }
 
-.fa {
+
+
+#Contato .fa {
     padding: 10px;
     font-size: 40px;
     width: 60px;
@@ -314,17 +364,17 @@ body, html{
     background: rgb(128, 128, 128);
     color: white;
   }
-.itens{
+  #Contato .itens{
     padding: 20px;
 }
-.itens .text{
+#Contato .itens .text{
     font-size: 18px;
     color: black;
     text-align: center;
     text-decoration: none;
     margin: 15px 10px 15px 20px;
 }
-.itens .text:hover{
+#Contato .itens .text:hover{
     border-bottom: 1px solid rgb(0, 139, 139);
 }
 @media screen and (max-width: 1200px) {
