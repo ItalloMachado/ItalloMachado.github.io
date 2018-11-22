@@ -8,12 +8,19 @@
     <link rel="stylesheet" href="Style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
+    function MostraVideo(){
+        document.getElementById("videoOpen").style.display="block";
+    }
+    function FechaVideo(){
+        document.getElementById("videoOpen").style.display= "none";
+    } 
     function Menu(){
             document.getElementById("sidenav").style.width = "100%";
         }
-        function closeNav(){
+    function closeNav(){
             document.getElementById("sidenav").style.width = "0";
-        } 
+    } 
+        
         $(document).ready(function(){
             window.onscroll = function() {
                 if (window.innerWidth>=800){
@@ -127,10 +134,16 @@
                     <h1>Projetos</h1> 
                 </div>
                 <div class="Conteudo">
-                    <div class="card">
-                        <a href="https://github.com/ItalloMachado/Chat"target="_blank">Projeto Chat</a>
-                        <p class="projtext">Projeto de um Chat(bate-papo) feito com node.js. Projeto disponível no meu github.</p>
-                     </div>
+                        <div class="logo Proj">
+                            <h1>Chat</h1>
+                            <img src="Imagens/ChatProj.png" class="imgskills" alt="C++" width="600" height="400">
+                            <div class="sobreImg">
+                                <div class="icons">
+                                <a href="https://github.com/ItalloMachado/Chat" target="_blank" class="fa fa-github"></a>
+                                <a href="javascript:void(0)" class="fa fa-vimeo" onclick="MostraVideo()"></a>
+                            </div>
+                            </div>
+                        </div>
                 </div>
             </div>
             <div  id="Skills"> 
@@ -214,5 +227,9 @@
             </div>
         </div>
     </div>
+    <div id="videoOpen">
+            <a href="javascript:void(0)" class="closebtn" onclick="FechaVideo()">&times;</a>
+            <iframe class="videoProjeto" src="https://player.vimeo.com/video/302161871" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
 </body>
 </html>
