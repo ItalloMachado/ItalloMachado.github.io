@@ -303,6 +303,10 @@ body, html{
     padding: 10px 30px;
 }
 .videoProjeto{
+    width: 100%;
+    max-width: 940px;
+    max-height: 660px;
+    height: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
