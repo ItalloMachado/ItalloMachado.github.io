@@ -403,6 +403,10 @@ body, html{
         display: block;
         margin-bottom: 10px;
       }
+      #imagem{
+        padding: 20px;
+        border: 5px;
+      }
 }
 @media screen and (max-width: 400px) {
     .nav {   
