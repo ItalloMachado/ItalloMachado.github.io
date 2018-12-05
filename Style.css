@@ -123,6 +123,10 @@ body, html{
     background-color: #e0e0e0;
 }
 
+.ativo{
+    background-color: #e0e0e0;
+}
+
 .textHead{
     position: absolute;
     /* width: 250px;
@@ -404,8 +408,8 @@ body, html{
         margin-bottom: 10px;
       }
       #imagem{
-        padding: 20px;
-        border: 5px;
+          padding: 20px;
+          border: 5px;
       }
 }
 @media screen and (max-width: 400px) {
