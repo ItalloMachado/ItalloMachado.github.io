@@ -83,18 +83,18 @@
                 }
             };
             $('a').on('click',function(event){
-                var atual=document.getElementsByClassName("ativo");
-                if (atual.length>0){
-                    atual[0].className=atual[0].className.replace("ativo","");
-                }
-                this.className+="ativo";
                 if(this.hash !==""){
                     event.preventDefault();
                     var hash=this.hash;
                     if (window.innerWidth>=800){
-                     $('html,body').animate({scrollTop: $(hash).offset().top},800,function(){
-                        window.location.hash=hash;}); 
-                     }else{
+                        var atual=document.getElementsByClassName("ativo");
+                        if (atual.length>0){
+                            atual[0].className=atual[0].className.replace("ativo","");
+                        }
+                        this.className+="ativo";
+                        $('html,body').animate({scrollTop: $(hash).offset().top},800,function(){
+                            window.location.hash=hash;}); 
+                    }else{
                         document.getElementById("sidenav").style.width = "0";
                         var x=$(hash).offset().top-60;
                         $('html,body').animate({scrollTop: x},800,function(){});
