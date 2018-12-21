@@ -34,7 +34,6 @@
                         atual[0].className=atual[0].className.replace("ativo","");
                     }
                 document.getElementById("ProjetosNav").className+="ativo";
-
                 }else if(document.documentElement.scrollTop<document.getElementById("Educacao").offsetTop){
                     var atual=document.getElementsByClassName("ativo");
                     if (atual.length>0){
@@ -53,7 +52,6 @@
                         atual[0].className=atual[0].className.replace("ativo","");
                     }
                 document.getElementById("ContatoNav").className+="ativo";
-
                 }
                 if (window.innerWidth>=800){
                     document.getElementById("closebtn").style.display="none";
@@ -98,7 +96,6 @@
                         var x=$(hash).offset().top-60;
                         $('html,body').animate({scrollTop: x},800,function(){});
                      }
-                    
                 }
             });
             $('.SideFoto').on('click',function(event){
@@ -154,7 +151,6 @@
             </div>  
         </div>
         <div class="Principal" id="Principal"> 
-
             <div  id="Sobre"> 
                 <div class="textInicial">
                     <h1>Sobre</h1> 
@@ -170,14 +166,14 @@
                     <h1>Projetos</h1> 
                 </div>
                 <div class="Conteudo">
-                        <div class="logo Proj">
+                      <div class="logo Proj">
                             <h1>Chat</h1>
                             <img src="Imagens/ChatProj.png" class="imgskills" alt="C++" width="600" height="400">
                             <div class="sobreImg">
                                 <div class="icons">
-                                <a href="https://github.com/ItalloMachado/Chat" target="_blank" class="fa fa-github"></a>
-                                <a href="javascript:void(0)" class="fa fa-vimeo" onclick="MostraVideo()"></a>
-                            </div>
+                                    <a href="https://github.com/ItalloMachado/Chat" target="_blank" class="fa fa-github"></a>
+                                    <a href="javascript:void(0)" class="fa fa-vimeo" onclick="MostraVideo()"></a>
+                                </div>
                             </div>
                         </div>
                 </div>
@@ -239,7 +235,6 @@
                         </ul>
                         <p class="data">Agosto/2017 - Atualmente</p>  
                     </div>
-                    
                 </div>
             </div>
             <div  id="Contato"> 
